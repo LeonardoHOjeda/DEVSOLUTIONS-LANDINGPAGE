@@ -1,9 +1,9 @@
 ---
-import { Image } from 'astro:assets'
-import H1 from '../components/H1.astro'
 import Main from '../components/Main.astro'
 import Layout from '../layouts/Layout.astro'
 import Hero from '../components/Hero.astro'
+import Card from '../components/Card.astro'
+import PriceCard from '../components/PriceCard.astro'
 ---
 
 <Layout title="Bienvenido a DevSolutions">
@@ -40,61 +40,49 @@ import Hero from '../components/Hero.astro'
 			description="Tener una página web hace que el negocio esté siempre abierto porque ofrece a los clientes la posibilidad de acceder a información, productos y servicios en cualquier momento, independientemente de la ubicación o la hora del día. Esto amplía la disponibilidad y la conveniencia para los clientes, lo que a su vez puede aumentar las ventas y la visibilidad del negocio, incluso cuando la empresa física está cerrada."
 			imageUrl="https://picsum.photos/800/800"
 			backgroundColor="bg-gray-300"
-		/>
-
-		<Hero
-			title="Tu negocio siempre abierto"
-			description="Tener una página web hace que el negocio esté siempre abierto porque ofrece a los clientes la posibilidad de acceder a información, productos y servicios en cualquier momento, independientemente de la ubicación o la hora del día. Esto amplía la disponibilidad y la conveniencia para los clientes, lo que a su vez puede aumentar las ventas y la visibilidad del negocio, incluso cuando la empresa física está cerrada."
-			imageUrl="https://picsum.photos/400/400"
-			backgroundColor="bg-red-300"
+			isOdd={true}
 		/>
 		<Hero
 			title="Visibilidad global"
 			description="Una página web permite que tu negocio esté disponible en todo el mundo las 24 horas del día, los 7 días de la semana, alcanzando a un público mucho más amplio."
 			imageUrl="https://picsum.photos/800/800"
-			backgroundColor="bg-gray-300"
+			backgroundColor="bg-blueSea-800"
 		/>
 		<Hero
 			title="Accesibilidad"
 			description="Tus clientes pueden acceder a la información sobre tus productos o servicios en cualquier momento y desde cualquier lugar, lo que hace que sea más conveniente para ellos."
 			imageUrl="https://picsum.photos/800/800"
-			backgroundColor="bg-blueSea-800"
+			backgroundColor="bg-gray-300"
+			isOdd={true}
 		/>
 		<Hero
 			title="Respaldo para tu Negocio Físico"
 			description="Si tienes un negocio físico, una página web puede atraer a más clientes locales y mejorar la visibilidad de tu ubicación física."
 			imageUrl="https://picsum.photos/800/800"
-			backgroundColor="bg-gray-300"
+			backgroundColor="bg-blueSea-800"
 		/>
 	</Main>
-	<section class="px-24">
+	<section class="mx-4">
+		<hr class="border-2 h-px my-8" />
+		<h3 class="text-center text-3xl font-bold uppercase mb-3">
+			Revisa nuestros planes
+		</h3>
+		<div class="flex flex-col md:flex-row items-center justify-center gap-5">
+			<PriceCard />
+			<PriceCard />
+			<PriceCard />
+		</div>
+	</section>
+	<section class="px-2 md:px-24">
 		<hr class="border-2 h-px my-8" />
 		<div class="text-center">
 			<h1 class="text-4xl font-bold">Nuestro blog</h1>
 			<p class="text-xl">Puedes visitar nuestro blog</p>
 		</div>
-		<div class="grid grid-cols-3">
-			<div class="bg-gray-200 p-4">
-				<h2 class="text-2xl font-bold">Título del post</h2>
-				<p class="text-xl">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-					voluptatum.
-				</p>
-			</div>
-			<div class="bg-gray-200 p-4">
-				<h2 class="text-2xl font-bold">Título del post</h2>
-				<p class="text-xl">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-					voluptatum.
-				</p>
-			</div>
-			<div class="bg-gray-200 p-4">
-				<h2 class="text-2xl font-bold">Título del post</h2>
-				<p class="text-xl">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-					voluptatum.
-				</p>
-			</div>
+		<div class="grid grid-cols-1 md:grid-cols-3 mx-auto">
+			<Card />
+			<Card />
+			<Card />
 		</div>
 	</section>
 </Layout>
