@@ -1,0 +1,106 @@
+---
+import { Image } from 'astro:assets'
+import H1 from '../components/H1.astro'
+import Main from '../components/Main.astro'
+import Layout from '../layouts/Layout.astro'
+import Hero from '../components/Hero.astro'
+---
+
+<Layout title="Bienvenido a DevSolutions">
+	<div class="relative">
+		<!-- Contenedor del efecto parallax -->
+		<div class="absolute inset-0 z-10 bg-opacity-70 bg-black"></div>
+		<!-- Capa de superposición -->
+		<div
+			class="absolute inset-0 flex flex-col items-center justify-center z-20"
+		>
+			<div>
+				<h1
+					class="font-bold text-2xl text-center text-white uppercase md:text-5xl"
+				>
+					¿La presencia en línea te parece complicada?
+				</h1>
+			</div>
+			<div class="font-extralight text-white text-xl text-center md:text-4xl">
+				Hacemos que sea fácil y exitosa
+			</div>
+			<div class="mt-20">
+				<button class="bg-white px-4 py-2 rounded-lg">Contáctanos</button>
+			</div>
+		</div>
+		<div
+			class="flex items-center justify-center h-96 bg-fixed bg-cover parallax"
+		>
+		</div>
+		<!-- Ajusta las clases para el tamaño deseado -->
+	</div>
+	<Main>
+		<Hero
+			title="Tu negocio siempre abierto"
+			description="Tener una página web hace que el negocio esté siempre abierto porque ofrece a los clientes la posibilidad de acceder a información, productos y servicios en cualquier momento, independientemente de la ubicación o la hora del día. Esto amplía la disponibilidad y la conveniencia para los clientes, lo que a su vez puede aumentar las ventas y la visibilidad del negocio, incluso cuando la empresa física está cerrada."
+			imageUrl="https://picsum.photos/800/800"
+			backgroundColor="bg-gray-300"
+		/>
+
+		<Hero
+			title="Tu negocio siempre abierto"
+			description="Tener una página web hace que el negocio esté siempre abierto porque ofrece a los clientes la posibilidad de acceder a información, productos y servicios en cualquier momento, independientemente de la ubicación o la hora del día. Esto amplía la disponibilidad y la conveniencia para los clientes, lo que a su vez puede aumentar las ventas y la visibilidad del negocio, incluso cuando la empresa física está cerrada."
+			imageUrl="https://picsum.photos/400/400"
+			backgroundColor="bg-red-300"
+		/>
+		<Hero
+			title="Visibilidad global"
+			description="Una página web permite que tu negocio esté disponible en todo el mundo las 24 horas del día, los 7 días de la semana, alcanzando a un público mucho más amplio."
+			imageUrl="https://picsum.photos/800/800"
+			backgroundColor="bg-gray-300"
+		/>
+		<Hero
+			title="Accesibilidad"
+			description="Tus clientes pueden acceder a la información sobre tus productos o servicios en cualquier momento y desde cualquier lugar, lo que hace que sea más conveniente para ellos."
+			imageUrl="https://picsum.photos/800/800"
+			backgroundColor="bg-blueSea-800"
+		/>
+		<Hero
+			title="Respaldo para tu Negocio Físico"
+			description="Si tienes un negocio físico, una página web puede atraer a más clientes locales y mejorar la visibilidad de tu ubicación física."
+			imageUrl="https://picsum.photos/800/800"
+			backgroundColor="bg-gray-300"
+		/>
+	</Main>
+	<section class="px-24">
+		<hr class="border-2 h-px my-8" />
+		<div class="text-center">
+			<h1 class="text-4xl font-bold">Nuestro blog</h1>
+			<p class="text-xl">Puedes visitar nuestro blog</p>
+		</div>
+		<div class="grid grid-cols-3">
+			<div class="bg-gray-200 p-4">
+				<h2 class="text-2xl font-bold">Título del post</h2>
+				<p class="text-xl">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+					voluptatum.
+				</p>
+			</div>
+			<div class="bg-gray-200 p-4">
+				<h2 class="text-2xl font-bold">Título del post</h2>
+				<p class="text-xl">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+					voluptatum.
+				</p>
+			</div>
+			<div class="bg-gray-200 p-4">
+				<h2 class="text-2xl font-bold">Título del post</h2>
+				<p class="text-xl">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+					voluptatum.
+				</p>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.parallax {
+		background-image: url('/parallax.jpg');
+	}
+</style>
